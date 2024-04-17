@@ -180,7 +180,7 @@ request(Method, URL, Headers) ->
   | {ok, integer(), list()}
   | {error, term()}.
 request(Method, URL, Headers, Body) ->
-  request(Method, URL, Headers, Body, []).
+  request(Method, URL, Headers, Body, [{recv_timeout, 60000}]).
 
 %% @doc make a request
 %%
